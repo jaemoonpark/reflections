@@ -1,0 +1,14 @@
+Initializing a repository is neccessary to create a git repository. It takes a snapshot of the current directory.
+
+-----
+
+*git commit -> creates a commit of the files in the staging area.
+*git add -filename- -> adds file to staging area
+*git reset -filename- -> removes file from staging area
+Staging Area-> marks file to be committed
+
+*git init- Initilizates new empty git repository
+*git status — shows which files have changed since the last commit.
+
+HEAD- name for current commit
+
