@@ -5,10 +5,18 @@ Initializing a repository is neccessary to create a git repository. It takes a s
 *git commit -> creates a commit of the files in the staging area.
 *git add -filename- -> adds file to staging area
 *git reset -filename- -> removes file from staging area
-Staging Area-> marks file to be committed
+Staging Area-> marks file to be committed. Useful when wanting to commit only certain files.
 
 *git init- Initilizates new empty git repository
-*git status — shows which files have changed since the last commit.
+*git status — shows which files have changed since the last commit. also shows files in working directory as well as files that are in and not in the staging area.
 
 HEAD- name for current commit
 
+Types of commit:
+feat: a new feature
+fix: a bug fix
+docs: changes to documentation
+style: formatting, missing semi colons, etc; no code change
+refactor: refactoring production code
+test: adding tests, refactoring test; no production code change
+chore: updating build tasks, package manager configs, etc; no production code change
