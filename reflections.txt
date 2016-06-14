@@ -1,0 +1,5 @@
+git init- Initilizates new empty git repository
+git status — shows which files have changed since the last commit.
+
+HEAD- name for current commit
+
