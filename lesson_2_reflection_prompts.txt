@@ -20,3 +20,37 @@ style: formatting, missing semi colons, etc; no code change
 refactor: refactoring production code
 test: adding tests, refactoring test; no production code change
 chore: updating build tasks, package manager configs, etc; no production code change
+
+----
+*git diff without arguments shows differences in files between staging area and current working directory. (files appear as ---+++)
+
+*git diff --staged, shows difference between staging area and repository (if you add a line a code in a file in staging area, shows as a + compared the unmodified repository)
+
+*git reset --hard, resets changes in working directory and staging area.
+
+*git branch, shows current branches
+
+*git branch -name-, creates a branch with the name
+
+Asterick next to a branch after using git branch refers to currently checked out branch
+----
+braches
+
+master- name given to the main branch
+
+Detatched head message means that you were at a commit without a branch name.
+
+tip of the branch- current last commit
+
+merging- combining two commits
+
+For experimental features, don't make changes on the master branch
+
+Branches help projects remained organized. It allows for easy identification based on change and allows for independent maintence for various versions. Branches are great for group projects-- some people can work on a bug-fix branch while others can work on features.
+
+*git log --graph --oneline -branch one- -branch two-
+	-> *these commits existed at branch one after branch two was created.
+	-> |these commits are added to branch two
+	-> *these commits existed before the branch two was created
+
+git checkout -b -new_branch_name- -> equivalent to creating a branch and checking it out
