@@ -54,3 +54,16 @@ Branches help projects remained organized. It allows for easy identification bas
 	-> *these commits existed before the branch two was created
 
 git checkout -b -new_branch_name- -> equivalent to creating a branch and checking it out
+
+---
+merge a branch into the master (which is adding a feaeture, fix, etc)
+
+important to realize that branches and commits are different!! commits are the actual bundles of file changes while branches are simply labels. however, if you delete a branch and you have no way to access the commits, the commits are unreachable!!
+
+*git merge -first branch- -second branch-, merges second branch into the first branch
+
+*git show -commit id-, shows difference between committed argument and its parent
+
+*git branch -d -branch name-, deletes branch label
+
+we merge two branches together in order to implement changes to the master file. branches are used so different people can work on different changes. we represent it using the diagram to show which changes to keep, remove, or add.
