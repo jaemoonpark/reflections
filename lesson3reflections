@@ -23,3 +23,27 @@ To give someone permission to push to a repository, you have to add their userna
 
 Use forks when wanting to clone someone else repository directly onto your github account. Use clone when wanting to have the repository directly on your local machine. Use branch when wanting to add seperate features or fix bugs indepedently from another contributer.
 
+When you have a remote, some data is copied into your local repository. One thing is that you get local copies of all remote branches. The state of the branches are parallel to when you last pushed or pulled in other words, it updates when you push or pull. You also get the last known position of the branch of the remote. For example, you get a branch that points to the latest master of the github repository. The branch name include remote name as well as the branch name formatted as the following remotename/branchofremote (updates each time you push or pull data). For example, origin/master.
+
+*git fetch -name- -> Updates the remote branch on the local repository, branching it off (?)
+
+*git fetch origin -> updates all local copies of every branch for the origin remote
+
+*git pull origin master -> equivalent to *git fetch origin, git merge master origin/master
+
+*git status -> compares local master branch to origin/master
+
+*git log origin/master -> shows commits of the origin/master branch
+
+git branch -a -> shows remote branches as well as local branches
+
+When merge conflicts arise, don't forget to add the resolved file back in the staging area.
+
+Don't forget to be in the branch when merging together
+	-> ex git merge master origin/master -> make sure you're in master branch
+
+Fast forward merges -> takes place when you merge two commits, one of them being an ancestor of the other. when you merge descendant into ancestor, instead of creating a new commit, the ancestor now points to the descendant commit.
+
+Having a copy of the last known state of remote stored locally would be useful for keeping track of updates, figuring out potential merge conflicts, etc.
+
+
