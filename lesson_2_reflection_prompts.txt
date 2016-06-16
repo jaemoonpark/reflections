@@ -73,3 +73,8 @@ we merge two branches together in order to implement changes to the master file.
 if git merge creates a conflict, it will mark it on the code using <<<<<<<. it identifies conflicting lines in both of the code while also showing the merged common ancestors (the code that was replaced/modified in both files(?).
 
 *git log -n # (shows that many # of recent commits)
+
+*git commit to finish the merge
+
+automatic merging-> speed efficient
+manual merge-> less likely to be prone to error (debatable)
