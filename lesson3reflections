@@ -1,1 +1,25 @@
+syncing locally and github does not happen automatically
+
+Remotes- Reference to another repository. Remote repositories helps push (send) and fetch (recieve) data.  This is most commonly done through branches.
+	Already existing commits on github that is pushed through branch will not be pushed.
+
+You must have at least one commit in order to clone a repository so check Initialize this repository with a README when starting completely new.
+
+*git clone -url- -> clones a repository from github onto your local machine
+	A remote is automatically set up pointing back to the cloned repository.
+*git remote -noarguments- -> Shows all current remotes
+*git remote add -name- -url- -> adds a remote, common practice is to name the remove origin if you are only going to have one remote
+*git remove -v -> used to show information about link added (making it verbose)
+*git push -remotename- -localbranch- -> pushes local branch to remotename
+*git pull -remotename- -remotebranch- -> pulls the remotebranch from the remote to the local
+
 You would want to use a remote repository rather than a local file in case you want to access your data from a different computer or if you are doing a collaboration with people from varying locations.
+
+It's good having to pull changes manually because in some cases, you want only specific parts of files. In addition, other people can contribute changes and if their commits got accepted, automatically syncing to yours can cause some confusion and error.
+
+Forking- Allows to clone a repository onto your github account without transferring it to your local machine and then you uploading it yourself. Makes it easier to identify original author of repository as well as keeping data such as how many times forked. Also helps it easier to make suggestions.
+
+To give someone permission to push to a repository, you have to add their username to collaborator.
+
+Use forks when wanting to clone someone else repository directly onto your github account. Use clone when wanting to have the repository directly on your local machine. Use branch when wanting to add seperate features or fix bugs indepedently from another contributer.
+
