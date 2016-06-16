@@ -60,10 +60,16 @@ merge a branch into the master (which is adding a feaeture, fix, etc)
 
 important to realize that branches and commits are different!! commits are the actual bundles of file changes while branches are simply labels. however, if you delete a branch and you have no way to access the commits, the commits are unreachable!!
 
-*git merge -first branch- -second branch-, merges second branch into the first branch
+*git merge -first branch- -second branch-, merges second branch into the first branch (remember merging creates a new commit)
 
+
+ 
 *git show -commit id-, shows difference between committed argument and its parent
 
 *git branch -d -branch name-, deletes branch label
 
 we merge two branches together in order to implement changes to the master file. branches are used so different people can work on different changes. we represent it using the diagram to show which changes to keep, remove, or add.
+
+if git merge creates a conflict, it will mark it on the code using <<<<<<<. it identifies conflicting lines in both of the code while also showing the merged common ancestors (the code that was replaced/modified in both files(?).
+
+*git log -n # (shows that many # of recent commits)
