@@ -1,6 +1,6 @@
 syncing locally and github does not happen automatically
 
-Remotes- Reference to another repository. Remote repositories helps push (send) and fetch (recieve) data.  This is most commonly done through branches.
+Remotes- Reference to another repository. Remote repositories helps push (send) and pull (recieve) data.  This is most commonly done through branches.
 	Already existing commits on github that is pushed through branch will not be pushed.
 
 You must have at least one commit in order to clone a repository so check Initialize this repository with a README when starting completely new.
@@ -29,7 +29,8 @@ When you have a remote, some data is copied into your local repository. One thin
 
 *git fetch origin -> updates all local copies of every branch for the origin remote
 
-*git pull origin master -> equivalent to *git fetch origin, git merge master origin/master
+*git pull origin master -> equivalent to *git fetch origin, git merge master origin/master.
+pulls the master from the remote, and merges that master with the local master
 
 *git status -> compares local master branch to origin/master
 
@@ -42,8 +43,29 @@ When merge conflicts arise, don't forget to add the resolved file back in the st
 Don't forget to be in the branch when merging together
 	-> ex git merge master origin/master -> make sure you're in master branch
 
-Fast forward merges -> takes place when you merge two commits, one of them being an ancestor of the other. when you merge descendant into ancestor, instead of creating a new commit, the ancestor now points to the descendant commit.
+Fast forward merges -> takes place when you merge two commits, one of them being an ancestor of the other. when you merge descendant into ancestor, instead of creating a new commit, the ancestor now points to the descendant commit. This will not happen using the merge button on github even if all of the conditions are satisfied
 
 Having a copy of the last known state of remote stored locally would be useful for keeping track of updates, figuring out potential merge conflicts, etc.
 
+Pushing the same branch automatically updates the pull request.
 
+Without github, it would be much more difficult to collaborate on projects. It would involve lots of file transfers. However, one potential benefit is that internet acess would be optional.
+
+For merge conflicts for pull requests, you have to first clone the remote branch, modify it (usually by merge the remote's master into your branch), then push your branch into the master. This is common for collaboration because you generally want approval before modifying the master branch.
+
+on different oil, merge master into different oil, *git merge master different-oil
+
+*gitk -> hella useful for visualization
+
+*git push -f origin <branch> -> useful in case you get "updates were rejected because the tip..."
+
+
+To make label an existing commit with a branch,
+*git checkout -gitID or BranchID-
+*git branch -> check to see if branch exists
+*git branch -D -branch name- -> if branch name already exists
+*git branch -branch name- -> and finished
+
+you push/pull branches
+
+You would want to make changes in a seperate branch when you're directly modifying something in master that would result in a conflict when merging. Doing so will help identify conflicts easier and to make fixes easier.
